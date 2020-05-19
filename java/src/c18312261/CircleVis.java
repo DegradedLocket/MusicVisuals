@@ -27,16 +27,13 @@ public class CircleVis extends Visual
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
         }
-        if (key == '1')
+        if (key == 'n')
         {
             noOfCircles++;
-
         }
         
         //switch statement to change visuals
     }
-
-    float angle = 0;
 
     public void draw()
     {

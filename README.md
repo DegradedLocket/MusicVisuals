@@ -1,8 +1,8 @@
 # Music Visualiser Project
 
-Name:
+Name: Conor Melia
 
-Student Number: 
+Student Number: C18312261
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
@@ -14,6 +14,8 @@ Student Number:
 # Description of the assignment
 
 # Instructions
+For the Circle Visualiser, initially there is only a single circle. In order to 
+add more circles to the visualiser the 'n' key is pressed.
 
 # How it works
 
