@@ -1,6 +1,6 @@
 package c18312261;
  
-import ie.tudublin.Visual;
+import ie.tudublin.*;
 
 public class CircleWave extends Visual
 {

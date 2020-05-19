@@ -4,17 +4,19 @@ import ie.tudublin.*;
 
 public class MyVisualiser extends Visual
 {
+    Wave wave;
 
     public void settings()
     {
-        size(1024, 800, P3D);
+        size(1024, 800, P3D); 
     }
 
     public void setup()
     {
         startMinim();
-        startListening();
-        //loadAudio("heroplanet.mp3");
+
+        startListening(); 
+
         colorMode(HSB);
     }
 
@@ -25,49 +27,24 @@ public class MyVisualiser extends Visual
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
         }
-
-        //switch statement to change visuals
-        switch (key) {
-            case '1':
-                
-                break;
-        
-            default:
-                break;
-        }
     }
-
-    float angle = 0;
 
     public void draw()
     {
         background(0);
-        calculateAverageAmplitude();
-        stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-        strokeWeight(5);
-        noFill();
-        lights();
-        
-        camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
+        try
+        {
+            // Call this if you want to use FFT data
+            calculateFFT(); 
+        }
+        catch(VisualException e)
+        {
+            e.printStackTrace();
+        }
+        // Call this is you want to use frequency bands
+        calculateFrequencyBands(); 
 
-        float boxSize = 50 + (200 * getSmoothedAmplitude());
-
-        pushMatrix();
-        translate(0 + (600 * getSmoothedAmplitude()), 0, -400);
-        rotateX(angle);
-        rotateZ(angle);        
-        box(boxSize);   
-        popMatrix();
-
-        
-        pushMatrix();
-        translate(0 - (600 * getSmoothedAmplitude()), 0, -400);
-        rotateX(-angle);
-        rotateZ(-angle);       
-        box(boxSize);   
-        popMatrix();
-
-        angle += 0.01f;
-    }
-
+        // Call this is you want to get the average amplitude
+        calculateAverageAmplitude();        
+    }    
 }
