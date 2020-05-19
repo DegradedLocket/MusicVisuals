@@ -1,6 +1,6 @@
 package c18312261;
 
-import ie.tudublin.Visual;
+import ie.tudublin.*;
 
 public class Wave extends Visual
 {
@@ -23,7 +23,22 @@ public class Wave extends Visual
         background(0);
         stroke(255);
 
+        float[] bands = getBands();
+
         //calculateFFT();
-        
+
+        try
+        {
+            calculateFFT(); 
+        }
+        catch(VisualException e)
+        {
+            e.printStackTrace();
+        }
+  
+        for (int i = 0; i < 250; i++)
+        {
+            ellipse(i, 200, 10, bands[i]);
+        }   
     }
 }

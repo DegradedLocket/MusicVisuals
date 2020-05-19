@@ -14,9 +14,11 @@ public class Main
 		//processing.core.PApplet.runSketch( a, new CubeVisual());
 		//processing.core.PApplet.runSketch( a, new CubeVisual1());
 		//processing.core.PApplet.runSketch( a, new MyVisual());
+		
 		//processing.core.PApplet.runSketch( a, new MyVisualiser());
 		//processing.core.PApplet.runSketch( a, new CircleVis());
 		processing.core.PApplet.runSketch( a, new CircleWave());
+		processing.core.PApplet.runSketch( a, new Wave());
 	}
 
 	public static void main(String[] args)
