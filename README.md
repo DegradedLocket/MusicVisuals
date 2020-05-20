@@ -18,7 +18,9 @@ For the Circle Visualiser, initially there is only a single circle. In order to
 add more circles to the visualiser the 'n' key is pressed.
 
 # How it works
-
+When creating these visuals I used the example as a guideline for developing mine.
+I have visuals called in two different ways, CubeVisual and CircleVis are called 
+and created directly in the Main method. Wave and CircleWave on the other hand are called in the MyVisualiser class which creates objects for these visuals.
 # What I am most proud of in the assignment
 
 # Markdown Tutorial

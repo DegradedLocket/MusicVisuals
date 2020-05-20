@@ -18,6 +18,8 @@ public class MyVisualiser extends Visual
         startListening(); 
 
         colorMode(HSB);
+
+        wave = new Wave(this);
     }
 
     public void keyPressed()
@@ -45,6 +47,8 @@ public class MyVisualiser extends Visual
         calculateFrequencyBands(); 
 
         // Call this is you want to get the average amplitude
-        calculateAverageAmplitude();        
+        calculateAverageAmplitude();   
+        
+        wave.render();
     }    
 }

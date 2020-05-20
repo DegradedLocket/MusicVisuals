@@ -16,7 +16,7 @@ public class Wave extends Visual
     {
         for (int i = 0; i < visual.getAudioBuffer().size(); i++)
         {
-            
+            visual.ellipse(i, 0, 10, visual.getAudioBuffer().get(i));
         }
     }
 }
