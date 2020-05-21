@@ -2,7 +2,7 @@ package c18312261;
 
 import ie.tudublin.*;
 
-public class CubeVisual extends Visual
+public class Cubes extends Visual
 {
 
     public void settings()

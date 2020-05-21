@@ -9,7 +9,7 @@ public class CircleVis extends Visual
 
     public void settings()
     {
-        size(1024, 800, P3D);
+        size(1024, 800);
     }
 
     public void setup()

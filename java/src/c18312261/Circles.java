@@ -20,16 +20,19 @@ public class Circles extends Visual
 
     public void draw()
     {
-        camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
+        calculateAverageAmplitude();
+        calculateFrequencyBands();
+
+
         background(0);
         stroke(255);
         fill(255);
 
-        pushMatrix();
-        for (int i = 0; i < getBands().length; i++)
+        
+        for (int i = 1; i < getBands().length; i++)
         {
-            circle(i, map(getSmoothedAmplitude(), 0, 1, 0, height), getSmoothedAmplitude() * 100);
+            circle(getSmoothedBands()[i] * 10, map(getSmoothedAmplitude(), 0, 1, 0, height), getSmoothedAmplitude() * 100);
         }
-        popMatrix();
+
     }
 }

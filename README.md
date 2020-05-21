@@ -20,7 +20,11 @@ add more circles to the visualiser the 'n' key is pressed.
 # How it works
 When creating these visuals I used the example as a guideline for developing mine.
 I have visuals called in two different ways, CubeVisual and CircleVis are called 
-and created directly in the Main method. Wave and CircleWave on the other hand are called in the MyVisualiser class which creates objects for these visuals.
+and created directly in the Main method. Circles on the other hand is called in the MyVisualiser class which creates objects for this visuals.
+
+Cube Visual is a basic visualier that has both rotation and laterally. The amplitude dictates both the size and the distance from the centre.
+
+Circle Vis starts with a single circle of a radius that is based on the amplitude. More circles can be added by the user. These radii of these circles are also based on amplitided but the amplitude is multiplied for each iteration.
 # What I am most proud of in the assignment
 
 # Markdown Tutorial
