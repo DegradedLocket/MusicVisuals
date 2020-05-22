@@ -9,20 +9,25 @@ public class CircleVis extends Visual
 
     public void settings()
     {
-        size(1024, 800);
+        size(1920, 1080);
     }
 
     public void setup()
     {
         startMinim();
-        startListening();
-        //loadAudio("heroplanet.mp3");
+        //startListening();
+        loadAudio("underTheBridge.mp3");
         colorMode(HSB);
     }
 
     public void keyPressed()
     {
-        
+        if (key == ' ')
+        {
+            getAudioPlayer().cue(0);
+            getAudioPlayer().play();
+        }
+
         if (key == 'e')
         {
             noOfCircles++;
@@ -38,17 +43,17 @@ public class CircleVis extends Visual
         stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
         strokeWeight(5);
         noFill();
-        lights();
+        //lights();
         
-        camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
+        //camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
 
         pushMatrix();
-        translate(0, 0, -200);
+        //translate(0, 0, -200);
         
         //creates the specified no of circles
         for(int i = 1; i < noOfCircles + 1; i++)
         {
-            circle(0, 0, 60 + ((i * 300) * getSmoothedAmplitude()));
+            circle(width / 2, height / 2 , 100 + ((i * 500) * getSmoothedAmplitude()));
         }   
         popMatrix();
     }

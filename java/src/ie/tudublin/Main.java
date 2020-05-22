@@ -15,10 +15,11 @@ public class Main
 		//processing.core.PApplet.runSketch( a, new CubeVisual1());
 		//processing.core.PApplet.runSketch( a, new MyVisual());
 		
-		//processing.core.PApplet.runSketch( a, new Cubes());
-		//processing.core.PApplet.runSketch( a, new CircleVis());
-		//processing.core.PApplet.runSketch( a, new Circles());
+		processing.core.PApplet.runSketch( a, new Cubes());
+		processing.core.PApplet.runSketch( a, new CircleVis());
 		processing.core.PApplet.runSketch( a, new Wave());
+		
+		//processing.core.PApplet.runSketch( a, new Circles());
 		//processing.core.PApplet.runSketch(a, new MyVisualiser());
 	}
 

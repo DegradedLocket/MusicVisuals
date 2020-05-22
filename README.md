@@ -12,6 +12,7 @@ Student Number: C18312261
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
+This assignment  required us to create "Something beautiful to look at while listening to music" using the Processing Library in Java . This assignment was particularly interenting to me as I have been learning guitar for 3 years. To add a more personal touch to this, the audio I used to demo my visuals is a cover of Under the Bridge by the Red Hot Chilli Peppers preformed by myself.
 
 # Instructions
 For the Circle Visualiser, initially there is only a single circle. In order to 
@@ -21,14 +22,16 @@ For the Wave, you can change how high the wave is using 'w' and 's'. 'w' increse
 
 # How it works
 When creating these visuals I used the example as a guideline for developing mine.
-I have visuals called in two different ways, CubeVisual and CircleVis are called 
-and created directly in the Main method. Circles on the other hand is called in the MyVisualiser class which creates objects for this visuals.
+CubeVisual, CircleVis, and Wave are called and created directly in the Main method.
 
 Cube Visual is a basic visualier that has both rotation and laterally. The amplitude dictates how big the cubes are as well as how far they travel from the center of the screen.
 
-Wave creates a line  of Amplitudes over time. It acts like a graph where the X value represents the Time and the Y value represents the amplitude. The colour is also changed using the amplitude.
+CicleVis starts as single circle of a radius dictated by the Ampitude. The user can decide to add more circles. As more circles are added, the radius of these circles is based on the amplitude multipied by what iteration the circle is.
+
+Wave creates a line  of Amplitudes over time. It acts like a graph where the X value represents the Time and the Y value represents the amplitude. The colour is also changed using the amplitude. The visual will move when the graph reaches the end of  the screen by removing the first element in the arrayList.
+
 # What I am most proud of in the assignment
-I was most proud of the Wave graphic as it took me a lot of trial and error to get working. I ended up having to reserach the beginShape and endShape functions as well as the vertex in proceesing as well as using an ArrayList to store the history of amplitude so it would dynamically increase in size.
+I was most proud of the Wave graphic as it took me a lot of trial and error to get working. I ended up having to reserach the beginShape and endShape functions as well as the vertex in proceesing as well as using an ArrayList to store the history of amplitude so it would dynamically increase in size. I had to investigate how ArrayLists add and remove elements so that the current amplitude is always on screen. 
 
 # Markdown Tutorial
 

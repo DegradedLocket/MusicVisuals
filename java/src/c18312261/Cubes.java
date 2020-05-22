@@ -7,14 +7,14 @@ public class Cubes extends Visual
 
     public void settings()
     {
-        size(1024, 800, P3D);
+        size(1920, 1080, P3D);
     }
 
     public void setup()
     {
         startMinim();
-        startListening();
-        //loadAudio("heroplanet.mp3");
+        //startListening();
+        loadAudio("underTheBridge.mp3");
         colorMode(HSB);
     }
 
@@ -24,16 +24,6 @@ public class Cubes extends Visual
         {
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
-        }
-
-        //switch statement to change visuals
-        switch (key) {
-            case '1':
-                
-                break;
-        
-            default:
-                break;
         }
     }
 

@@ -34,6 +34,11 @@ public class Wave extends Visual
     
     public void keyPressed()
     {
+        if (key == ' ')
+        {
+            getAudioPlayer().cue(0);
+            getAudioPlayer().play();
+        }
         
         if (key == 'w')
         {
@@ -51,7 +56,7 @@ public class Wave extends Visual
     }
     public void settings()
     {
-        size(1024, 800, P3D);
+        size(1920, 1080, P3D);
     }
 
     public void setup()
@@ -59,9 +64,9 @@ public class Wave extends Visual
         startMinim();
        // startListening();
         
-        loadAudio("heroplanet.mp3");
-        getAudioPlayer().cue(0);
-        getAudioPlayer().play();
+        loadAudio("underTheBridge.mp3");
+        //getAudioPlayer().cue(0);
+        //getAudioPlayer().play();
        
         colorMode(HSB);
     }
@@ -85,6 +90,10 @@ public class Wave extends Visual
             float y = (map(ampHist.get(i) * sizeOfGraph, 0, 1, height, 0));
 
             vertex(i, y);
+            if (ampHist.size() > width)
+            {
+                ampHist.remove(0);
+            }
         }
         endShape();
     }
