@@ -1,5 +1,7 @@
 package c18312261;
 
+import java.util.ArrayList;
+
 import ie.tudublin.*;
 
 public class Wave extends Visual
@@ -26,6 +28,27 @@ public class Wave extends Visual
         endShape();
     } */
 
+    ArrayList<Float> ampHist = new ArrayList<Float>();
+
+    int sizeOfGraph = 1;
+    
+    public void keyPressed()
+    {
+        
+        if (key == 'w')
+        {
+            sizeOfGraph++;
+        }
+        else if (key == 's')
+        {
+            if(sizeOfGraph > 1)
+            {
+                sizeOfGraph--;
+            }
+        }
+        
+        //switch statement to change visuals
+    }
     public void settings()
     {
         size(1024, 800, P3D);
@@ -34,26 +57,34 @@ public class Wave extends Visual
     public void setup()
     {
         startMinim();
-        startListening();
+       // startListening();
+        
         loadAudio("heroplanet.mp3");
         getAudioPlayer().cue(0);
         getAudioPlayer().play();
+       
         colorMode(HSB);
     }
 
     public void draw()
     {
         background(0);
-        stroke(255);
         noFill();
         calculateAverageAmplitude();
 
+        ampHist.add(getAmplitude());
+
+        //this is where the shape of the waveform begins
         beginShape();
-        for (int i = 0; i < getAudioBuffer().size() ; i++)
+        //this loops through array list that contains the amplitude, graphing them
+        for (int i = 0; i < ampHist.size() ; i++)
         {
-            float y = map(getAmplitude(), 0, 1, height, 10);
+            //colours the line based on amplitude
+            stroke(map(i, 0, ampHist.size(), 0, 255), 255, 255);
+            
+            float y = (map(ampHist.get(i) * sizeOfGraph, 0, 1, height, 0));
+
             vertex(i, y);
-            //point(i, y);
         }
         endShape();
     }

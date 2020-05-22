@@ -15,17 +15,20 @@ Student Number: C18312261
 
 # Instructions
 For the Circle Visualiser, initially there is only a single circle. In order to 
-add more circles to the visualiser the 'n' key is pressed.
+add more circles to the visualiser the 'e' key is pressed.
+
+For the Wave, you can change how high the wave is using 'w' and 's'. 'w' increses how much the amplitude makes the wave, 's' decreases the height. The minimum value is 1.
 
 # How it works
 When creating these visuals I used the example as a guideline for developing mine.
 I have visuals called in two different ways, CubeVisual and CircleVis are called 
 and created directly in the Main method. Circles on the other hand is called in the MyVisualiser class which creates objects for this visuals.
 
-Cube Visual is a basic visualier that has both rotation and laterally. The amplitude dictates both the size and the distance from the centre.
+Cube Visual is a basic visualier that has both rotation and laterally. The amplitude dictates how big the cubes are as well as how far they travel from the center of the screen.
 
-Circle Vis starts with a single circle of a radius that is based on the amplitude. More circles can be added by the user. These radii of these circles are also based on amplitided but the amplitude is multiplied for each iteration.
+Wave creates a line  of Amplitudes over time. It acts like a graph where the X value represents the Time and the Y value represents the amplitude. The colour is also changed using the amplitude.
 # What I am most proud of in the assignment
+I was most proud of the Wave graphic as it took me a lot of trial and error to get working. I ended up having to reserach the beginShape and endShape functions as well as the vertex in proceesing as well as using an ArrayList to store the history of amplitude so it would dynamically increase in size.
 
 # Markdown Tutorial
 

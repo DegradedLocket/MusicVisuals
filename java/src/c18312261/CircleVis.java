@@ -22,12 +22,8 @@ public class CircleVis extends Visual
 
     public void keyPressed()
     {
-        if (key == ' ')
-        {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
-        }
-        if (key == 'n')
+        
+        if (key == 'e')
         {
             noOfCircles++;
         }
